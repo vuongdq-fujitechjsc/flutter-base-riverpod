@@ -1,16 +1,57 @@
 # flutter_base_riverpod
 
-A new Flutter project.
+A Flutter base source about Riverpod
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Folder Structure
+```
+libs/
+    - configs/                                      <--- all config of project
+    - data/                                         <--- data layer
+    - domain/                                       <--- domain layer
+    - features/                                     <--- folder contains all feature of application
+    - networking/                                   <--- handle networking
+    - presentation/                                 <--- presentation layer 
+    - routes/                                       <--- config all router of application
+    - shared/                                       <--- folder contains code shared across features
+        - extensions/
+        - themes/
+        - widgets/
+    - main.dart                                     <--- entry point
+```
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+lib/
+    - configs/                          <--- application layer
+        - pages/                        <-- pages or screens
+          login/                        <-- some page in the app
+            login_controller.dart         <-- login controller extends `Controller`
+            login_presenter.dart          <-- login presenter extends `Presenter`
+            login_view.dart               <-- login view, 2 classes extend `View` and `ViewState` resp.
+        widgets/                      <-- custom widgets
+        utils/                        <-- utility functions/classes/constants
+        navigator.dart                <-- optional application navigator
+    data/                         <--- data layer
+        repositories/                 <-- repositories (retrieve data, heavy processing etc..)
+          data_auth_repo.dart           <-- example repo: handles all authentication
+        helpers/                      <-- any helpers e.g. http helper
+        constants.dart                <-- constants such as API keys, routes, urls, etc..
+    device/                       <--- device layer
+        repositories/                 <--- repositories that communicate with the platform e.g. GPS
+        utils/                        <--- any utility classes/functions
+    domain/                       <--- domain layer (business and enterprise) PURE DART
+        entities/                   <--- enterprise entities (core classes of the app)
+          user.dart                   <-- example entity
+          manager.dart                <-- example entity
+        usecases/                   <--- business processes e.g. Login, Logout, GetUser, etc..
+          login_usecase.dart          <-- example usecase extends `UseCase` or `CompletableUseCase`
+        repositories/               <--- abstract classes that define functionality for data and device layers
+    main.dart                     <--- entry point
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Library
+
+
+
