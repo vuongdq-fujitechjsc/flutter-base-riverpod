@@ -3,7 +3,18 @@ import 'package:flutter_base_riverpod/routes/app_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(ProviderScope(observers: [Logger()], child: const MyApp()));
+}
+
+class Logger extends ProviderObserver {
+  @override
+  void didUpdateProvider(ProviderBase<Object?> provider, Object? previousValue,
+      Object? newValue, ProviderContainer container) {
+    print('''{
+      "provider": "${provider.name ?? provider.runtimeType}",
+      "newValue": "$newValue"
+    }''');
+  }
 }
 
 class MyApp extends ConsumerStatefulWidget {
