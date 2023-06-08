@@ -6,8 +6,8 @@ import 'package:intl/intl.dart';
 import '../../../domain/model/todo_list_model.dart';
 import '../../../shared/routes/app_router.dart';
 import '../../../shared/routes/route_constant.dart';
-import 'filter_provider.dart';
-import 'todo_list_provider.dart';
+import 'provider/filter_provider.dart';
+import 'provider/todo_list_provider.dart';
 
 class TodoListScreen extends ConsumerWidget {
   final _todoListProvider = todoListViewModelStateNotifierProvider;
