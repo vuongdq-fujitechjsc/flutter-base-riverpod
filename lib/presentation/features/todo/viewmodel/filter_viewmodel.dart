@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'filter_provider.dart';
+import '../provider/filter_provider.dart';
 
 class FilterKindViewModel extends StateNotifier<FilterKind> {
   FilterKindViewModel() : super(FilterKind.all);
