@@ -41,5 +41,14 @@ libs/
     - main.dart                                     <--- entry point
 ```
 
-
+### Các vấn đề chưa xử lý trong code
+- authen
+- refresh token có check interceptors lock
+- force update - deeplink
+- theme
+- config env riêng cho ios, aos
+- back trong go_route
+- tabbar, drawer trong go_route
+- tách riêng validator
+- logging - debug
 
