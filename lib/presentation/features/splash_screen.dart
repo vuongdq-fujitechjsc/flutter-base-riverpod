@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base_riverpod/routes/app_router.dart';
-import 'package:flutter_base_riverpod/routes/route_constant.dart';
+import 'package:flutter_base_riverpod/shared/routes/app_router.dart';
+import 'package:flutter_base_riverpod/shared/routes/route_constant.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
@@ -19,7 +19,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
 
     //auto push to Login
     Future.delayed(const Duration(seconds: 1)).then((value) async {
-      ref.read(appRouterProvider).go(Routes.loginPage);
+      ref.read(appRouterProvider).go(Routes.loginScreen);
     });
   }
 

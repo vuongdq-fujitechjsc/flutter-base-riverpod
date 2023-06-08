@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base_riverpod/routes/app_router.dart';
+import 'package:flutter_base_riverpod/shared/routes/app_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
