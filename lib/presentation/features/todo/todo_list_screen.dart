@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base_riverpod/presentation/features/todo/todo_form_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
@@ -94,13 +93,7 @@ class TodoListScreen extends ConsumerWidget {
         ),
       ),
       onTap: () {
-        //handle push to create todo view
-        // ref.read(appRouterProvider).go(Routes.todoFormScreen, extra: todo);
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (_) => TodoFormScreen(todo),
-          ));
+        ref.read(appRouterProvider).push(Routes.todoFormScreen, extra: todo);
       },
     );
   }
@@ -125,15 +118,11 @@ class TodoListScreen extends ConsumerWidget {
     return const Center(child: Text("An error has occurred !"));
   }
 
-  Widget _buildFloatingActionButton(final BuildContext context, final WidgetRef ref) {
+  Widget _buildFloatingActionButton(
+      final BuildContext context, final WidgetRef ref) {
     return FloatingActionButton(
       onPressed: () {
-        // ref.read(appRouterProvider).go(Routes.todoFormScreen);
-        Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => const TodoFormScreen(null),
-        ));
+        ref.read(appRouterProvider).push(Routes.todoFormScreen);
       },
       child: const Icon(Icons.add),
     );

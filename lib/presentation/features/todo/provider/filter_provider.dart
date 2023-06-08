@@ -2,7 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../domain/model/todo_list_model.dart';
 import '../../../state/state.dart';
-import '../../todo_list/filter_viewmodel.dart';
+import '../viewmodel/filter_viewmodel.dart';
 import 'todo_list_provider.dart';
 
 enum FilterKind { all, completed, incomplete }

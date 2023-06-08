@@ -45,7 +45,7 @@ class _TodoFormScreenState extends ConsumerState<TodoFormScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(
-          onPressed: () => ref.read(appRouterProvider).go(Routes.homeScreen),
+          onPressed: () => ref.read(appRouterProvider).pop(),
         ),
         title: Text(_viewModel.appBarTitle()),
         actions: [
@@ -98,7 +98,7 @@ class _TodoFormScreenState extends ConsumerState<TodoFormScreen> {
       _viewModel.deleteTodo();
 
       if (mounted) {
-        Navigator.pop(context);
+       ref.read(appRouterProvider).pop();
       }
     }
   }
@@ -188,8 +188,7 @@ class _TodoFormScreenState extends ConsumerState<TodoFormScreen> {
           final currentState = _formKey.currentState;
           if (currentState != null && currentState.validate()) {
             _viewModel.createOrUpdateTodo();
-
-            Navigator.pop(context);
+            ref.read(appRouterProvider).pop();
           }
         },
         child: const Text('Save'),

@@ -51,4 +51,3 @@ libs/
 - tabbar, drawer trong go_route
 - tách riêng validator
 - logging - debug
-
