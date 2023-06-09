@@ -1,4 +1,4 @@
-import 'package:flutter_base_riverpod/domain/model/todo_list_model.dart';
+import '../../data/model/todo_list_model.dart';
 
 abstract class GetTodoListUseCase {
   Future<TodoList> execute();

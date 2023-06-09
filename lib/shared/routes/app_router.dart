@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base_riverpod/domain/model/todo_list_model.dart';
+import '../../../../data/model/todo_list_model.dart';
 import 'package:flutter_base_riverpod/presentation/features/home/home_screen.dart';
 import 'package:flutter_base_riverpod/presentation/features/login_screen.dart';
 import 'package:flutter_base_riverpod/presentation/features/setting/setting_screen.dart';
