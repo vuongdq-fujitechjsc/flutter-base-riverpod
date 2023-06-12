@@ -1,8 +1,8 @@
-import '../../domain/model/todo_list_model.dart';
 import '../../domain/repository/todo_list_repository.dart';
 import '../database/todo_list_database.dart';
 import '../mapper/todo_list_mapper.dart';
 import '../mapper/todo_mapper.dart';
+import '../model/todo_list_model.dart';
 
 class TodosRepositoryImpl implements TodoListRepository {
   final TodosDatabase database;

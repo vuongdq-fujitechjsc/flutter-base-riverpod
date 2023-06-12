@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../domain/model/todo_list_model.dart';
+import '../../../../data/model/todo_list_model.dart';
 import '../viewmodel/todo_form_viewmodel.dart';
 import 'todo_list_provider.dart';
 

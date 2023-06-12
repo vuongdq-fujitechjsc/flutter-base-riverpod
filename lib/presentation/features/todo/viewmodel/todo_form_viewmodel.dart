@@ -1,4 +1,4 @@
-import '../../../../domain/model/todo_list_model.dart';
+import '../../../../data/model/todo_list_model.dart';
 import 'todo_list_viewmodel.dart';
 
 class TodoFormViewModel {

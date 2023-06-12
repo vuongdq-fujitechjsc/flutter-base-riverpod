@@ -1,5 +1,5 @@
-import '../../domain/model/todo_list_model.dart';
 import '../entity/todo_list_entity.dart';
+import '../model/todo_list_model.dart';
 import 'todo_mapper.dart';
 
 class TodoListMapper {

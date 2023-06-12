@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
-import '../../../domain/model/todo_list_model.dart';
+import '../../../../data/model/todo_list_model.dart';
 import '../../../shared/routes/app_router.dart';
 import '../../../shared/routes/route_constant.dart';
 import 'provider/filter_provider.dart';

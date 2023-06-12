@@ -1,4 +1,4 @@
-import 'package:flutter_base_riverpod/domain/model/todo_list_model.dart';
+import '../../../../data/model/todo_list_model.dart';
 import 'package:flutter_base_riverpod/domain/usecase/todo_list_usecase.dart';
 import 'package:flutter_base_riverpod/presentation/state/state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
