@@ -21,8 +21,8 @@ analyzer:
     todo: ignore
     invalid_annotation_target: ignore
   strong-mode:
-    implicit-casts: false
-    implicit-dynamic: false
+    # implicit-casts: false
+    # implicit-dynamic: false
 
 linter:
   # The lint rules applied to this project can be customized in the
