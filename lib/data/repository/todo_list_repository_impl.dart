@@ -1,4 +1,4 @@
-import '../../domain/repository/todo_list_repository.dart';
+import 'todo_list_repository.dart';
 import '../database/todo_list_database.dart';
 import '../mapper/todo_list_mapper.dart';
 import '../mapper/todo_mapper.dart';

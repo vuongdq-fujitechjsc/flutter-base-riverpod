@@ -1,4 +1,4 @@
-import '../../data/model/todo_list_model.dart';
+import '../model/todo_list_model.dart';
 
 abstract class TodoListRepository {
   Future<TodoList> getTodoList();

@@ -1,5 +1,5 @@
 import '../../data/model/todo_list_model.dart';
-import '../repository/todo_list_repository.dart';
+import '../../data/repository/todo_list_repository.dart';
 import 'todo_list_usecase.dart';
 
 class GetTodoListUseCaseImpl implements GetTodoListUseCase {

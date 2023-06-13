@@ -20,15 +20,11 @@ class TodoListScreen extends ConsumerWidget {
         children: [
           // filter chip bar
           const Divider(height: 2, color: Colors.grey),
-          Consumer(
-            builder: (context, ref, _) {
-              return ref.watch(_filteredTodoListProvider).maybeWhen(
-                  success: (content) => _buildTodoListContainer(ref, content),
-                  error: (_) => _buildErrorContainer(),
-                  orElse: () => const Expanded(
-                      child: Center(child: CircularProgressIndicator())));
-            },
-          )
+          ref.watch(_filteredTodoListProvider).maybeWhen(
+              success: (content) => _buildTodoListContainer(ref, content),
+              error: (_) => _buildErrorContainer(),
+              orElse: () => const Expanded(
+                  child: Center(child: CircularProgressIndicator())))
         ],
       ),
       floatingActionButton: _buildFloatingActionButton(context, ref),

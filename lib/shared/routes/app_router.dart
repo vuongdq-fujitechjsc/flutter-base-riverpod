@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../data/model/todo_list_model.dart';
 import 'package:flutter_base_riverpod/presentation/features/home/home_screen.dart';
-import 'package:flutter_base_riverpod/presentation/features/login_screen.dart';
+import 'package:flutter_base_riverpod/presentation/features/auth/login_screen.dart';
 import 'package:flutter_base_riverpod/presentation/features/setting/setting_screen.dart';
 import 'package:flutter_base_riverpod/presentation/features/splash_screen.dart';
 import 'package:flutter_base_riverpod/presentation/features/todo/todo_form_screen.dart';
@@ -24,7 +24,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       redirect: (context, state) {
         // handle auth state
         // final isLoggedIn = ref.watch(authRepositoryProvider).currentUser != null;
-        final isLoggedIn = true;
+        final isLoggedIn = false;
         if (isLoggedIn) {
           if (state.matchedLocation.startsWith(Routes.loginScreen)) {
             return Routes.homeScreen;

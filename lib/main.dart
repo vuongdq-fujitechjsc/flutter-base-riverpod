@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base_riverpod/shared/routes/app_router.dart';
+import 'package:flutter_base_riverpod/shared/storage/local_storage_helper.dart';
+import 'package:flutter_base_riverpod/shared/storage/local_storage_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await LocalStorageManagement.init();
+  await LocalStorageProvider.init();
+
   runApp(ProviderScope(observers: [Logger()], child: const MyApp()));
 }
 
